@@ -1,0 +1,561 @@
+<MainScr>:
+    FloatLayout:
+        Image:
+            id: wfon
+            source: 'D:\\Projects\\pycharmprojects\\1772.jpg'
+        BoxLayout:
+            orientation: "vertical"
+            Button:
+                background_color: 255, 0, 50, 1
+                id: wfor
+                text: "Weather forecast"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5 }
+                size_hint: 0.7, 0.4
+                on_press: root.toWforecastScr()
+                font_size: 25
+            Button:
+                background_color: 255, 0, 50, 1
+                id: cver
+                text: "Converter"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5 }
+                size_hint: 0.7, 0.4
+                on_press: root.toConverterScr()
+                font_size: 25
+            Button:
+                id: clic
+                background_color: 255, 0, 50, 1
+                text: "Clicker"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5 }
+                size_hint: 0.7, 0.4
+                on_press: root.toClScr()
+                font_size: 25
+            Button:
+                id: tr
+                background_color: 255, 0, 50, 1
+                text: "Translator"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5 }
+                size_hint: 0.7, 0.4
+                on_press: root.toTrScr()
+                font_size: 25
+            Button:
+                background_color: 255, 0, 50, 1
+                font_size: 25
+                id: sett
+                text: "Settings"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5 }
+                size_hint: 0.7, 0.4
+                on_press: root.toSettingsScr()
+<ConverterScr>:
+    FloatLayout:
+        Image:
+            source: 'D:\\Projects\\pycharmprojects\\1772.jpg'
+        BoxLayout:
+            orientation: "vertical"
+            TextInput:
+                id: wsom
+                pos_hint: {"center_x": 0.5, "center_y": 0.5 }
+                size_hint: 0.5, 0.2
+                hint_text: "From which currency"
+                foreground_color: 255, 0, 50, 1
+                background_color: 0, 0, 0, 0
+                font_size: 25
+            TextInput:
+                id: insom
+                pos_hint: {"center_x": 0.5, "center_y": 0.5 }
+                size_hint: 0.5, 0.2
+                hint_text: "In which currency"
+                foreground_color: 1, 0, 0, 1
+                background_color: 0, 0, 0, 0
+                font_size: 25
+            TextInput:
+                id: ccur
+                pos_hint: {"center_x": 0.5, "center_y": 0.5 }
+                size_hint: 0.5, 0.2
+                hint_text: "Count of currency"
+                foreground_color: 1, 0, 0, 1
+                background_color: 0, 0, 0, 0
+                font_size: 25
+            TextInput:
+                id: result
+                pos_hint: {"center_x": 0.5, "center_y": 0.5 }
+                size_hint: 0.5, 0.2
+                hint_text: "Result"
+                foreground_color: 1, 0, 0, 1
+                background_color: 0, 0, 0, 0
+                font_size: 25
+            Button:
+                font_size: 25
+                background_color: 255, 0, 50, 1
+                id: convert
+                text: "Convert"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5 }
+                size_hint: 0.7, 0.4
+                on_press: root.convert()
+            Button:
+                font_size: 25
+                background_color: 255, 0, 50, 1
+                id: conmain
+                text: "Back to Main Screen"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5 }
+                size_hint: 0.7, 0.4
+                on_press: root.toConMain()
+<WforecastScr>:
+    FloatLayout:
+        Image:
+            source: 'D:\\Projects\\pycharmprojects\\1772.jpg'
+        BoxLayout:  
+            orientation: "vertical"
+            BoxLayout:
+                orientation: "horizontal"
+                Image:
+                    id: im1
+                    size_hint: 0.1, 1
+                    pos_hint: {'x': 0, 'center_y':0.5}
+                    source: 'D:\\Projects\\pycharmprojects\\8354127.png'
+
+                TextInput:
+                    id: w1
+                    hint_text: "Your city"
+                    foreground_color: 255, 0, 50, 1
+                    background_color: 255, 255, 255, 0
+                    font_size: 25
+            BoxLayout:
+                orientation: "horizontal"
+                Image:
+                    id: im2
+                    size_hint: 0.1, 1
+                    pos_hint: {'x': 0, 'center_y':0.5}
+                    source: 'D:\\Projects\\pycharmprojects\\climate-control-home-temperature-png-17.png'
+                    opacity: 0
+
+                TextInput:
+                    id: w2
+                    readonly: True
+                    foreground_color: 255, 0, 50, 1
+                    background_color: 255, 255, 255, 0.01
+                    font_size: 25
+            BoxLayout:
+                orientation: "horizontal"
+                Image:
+                    id: im3
+                    size_hint: 0.1, 1
+                    pos_hint: {'x': 0, 'center_y':0.5}
+                    source: 'D:\\Projects\\pycharmprojects\\temperature-feels-like-icon-495x512-ylzv705f.png'
+                    opacity: 0
+                TextInput:
+                    id: w3
+                    readonly: True
+                    foreground_color: 255, 0, 50, 1
+                    background_color: 255, 255, 255, 0.01
+                    font_size: 25
+            BoxLayout:
+                orientation: "horizontal"
+                Image:
+                    id: im4
+                    size_hint: 0.1, 1
+                    pos_hint: {'x': 0, 'center_y':0.5}
+                    source: 'D:\\Projects\\pycharmprojects\\1839341.png'
+                    opacity: 0
+                TextInput:
+                    id: w4
+                    readonly: True
+                    foreground_color: 255, 0, 50, 1
+                    background_color: 255, 255, 255, 0.01
+                    font_size: 25
+            BoxLayout:
+                orientation: "horizontal"
+                Image:
+                    id: im5
+                    size_hint: 0.1, 1
+                    pos_hint: {'x': 0, 'center_y':0.5}
+                    source: 'D:\\Projects\\pycharmprojects\\728093.png'
+                    opacity: 0
+                TextInput:
+                    id: w5
+                    readonly: True
+                    foreground_color: 255, 0, 50, 1
+                    background_color: 255, 255, 255, 0.01
+                    font_size: 25
+            BoxLayout:
+                orientation: "horizontal"
+                Image:
+                    id: im6
+                    size_hint: 0.1, 1
+                    pos_hint: {'x': 0, 'center_y':0.5}
+                    source: 'D:\\Projects\\pycharmprojects\\661295.png'
+                    opacity: 0
+                TextInput:
+                    id: w6
+                    readonly: True
+                    foreground_color: 255, 0, 50, 1
+                    background_color: 255, 255, 255, 0.01
+                    font_size: 25
+            BoxLayout:
+                orientation: "horizontal"
+                Image:
+                    id: im7
+                    size_hint: 0.1, 1
+                    pos_hint: {'x': 0, 'center_y':0.5}
+                    source: 'D:\\Projects\\pycharmprojects\\6740814.png'
+                    opacity: 0
+                TextInput:
+                    id: w7
+                    readonly: True
+                    foreground_color: 255, 0, 50, 1
+                    background_color: 255, 255, 255, 0.01
+                    font_size: 25
+            BoxLayout:
+                orientation: "horizontal"
+                Image:
+                    id: im8
+                    size_hint: 0.1, 1
+                    pos_hint: {'x': 0, 'center_y':0.5}
+                    source: 'D:\\Projects\\pycharmprojects\\3095235.png'
+                    opacity: 0
+                TextInput:
+                    id: w8
+                    readonly: True
+                    foreground_color: 255, 0, 50, 1
+                    background_color: 255, 255, 255, 0.01
+                    font_size: 25
+            BoxLayout:
+                orientation: "horizontal"
+                Image:
+                    id: im9
+                    size_hint: 0.1, 1
+                    pos_hint: {'x': 0, 'center_y':0.5}
+                    source: 'D:\\Projects\\pycharmprojects\\img_315328.png'
+                    opacity: 0
+                TextInput:
+                    id: w9
+                    readonly: True
+                    foreground_color: 255, 0, 50, 1
+                    background_color: 255, 255, 255, 0.01
+                    font_size: 25
+            BoxLayout:
+                orientation: "horizontal"
+                Image:
+                    id: im10
+                    size_hint: 0.1, 1
+                    pos_hint: {'x': 0, 'center_y':0.5}
+                    source: 'D:\\Projects\\pycharmprojects\\weather-overcast.png'
+                    opacity: 0
+                TextInput:
+                    id: w10
+                    readonly: True
+                    foreground_color: 255, 0, 50, 1
+                    background_color: 255, 255, 255, 0.01
+                    font_size: 25
+            BoxLayout:
+                orientation: "horizontal"
+                Button:
+                    background_color: 255, 0, 50, 1
+                    id: findW
+                    text: "Find out Weather"
+
+                    on_press: root.finwe()
+                    font_size: 25
+            BoxLayout:
+                orientation: "horizontal"
+                Button:
+                    background_color: 255, 0, 50, 1
+                    id: wformain
+                    text: "Back to Main Screen"
+
+                    on_press: root.toWfroMain()
+                    font_size: 25
+<ShopScr>:
+    FloatLayout:
+        Image:
+            source: 'D:\\Projects\\pycharmprojects\\1772.jpg'
+        BoxLayout:
+            orientation: 'vertical'
+            ScrollView:
+                size_hint_y: None
+                size_hint: 1, 1
+                GridLayout:
+                    id: items
+                    size_hint_y: None
+                    height: self.minimum_height
+                    cols: 1
+                    spacing: 30
+                    row_default_height: 100
+                    FloatLayout:
+                        Button:
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+                            on_press: root.buy(100, 10)
+                            background_color: 255, 0, 50, 1
+                            font_size: 25
+                        Image:
+                            size_hint: 0.1, 1
+                            pos_hint: {'x': 0, 'center_y':0.5}
+                            source: 'D:\\Projects\\pycharmprojects\\580b57fcd9996e24bc43c301.png'
+                        Label:
+                            size_hint: 0.1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+                            text: "+10xp for power"
+                            font_size: 25
+                        Label:
+                            size_hint: 0.1, 1
+                            pos_hint: {'right': 1, 'y': 0}
+                            text: "100$"
+                            font_size: 25
+                    FloatLayout:
+                        Button:
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+                            on_press: root.buy2(50, 5)
+                            background_color: 255, 0, 50, 1
+                            font_size: 25
+
+                        Image:
+                            size_hint: 0.1, 1
+                            pos_hint: {'x': 0, 'center_y':0.5}
+                            source: 'D:\\Projects\\pycharmprojects\\f8515c79ba9dd5745227e46b40e3a03b (1).png'
+                        Label:
+                            size_hint: 0.1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+                            text: "+10xp for power"
+                            font_size: 25
+                        Label:
+                            size_hint: 0.1, 1
+                            pos_hint: {'right': 1, 'y': 0}
+                            text: "50$"
+                            font_size: 25
+                    FloatLayout:
+                        Button:
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+                            on_press: root.buy3(100, 10)
+                            background_color: 255, 0, 50, 1
+                            font_size: 25
+                        Image:
+                            size_hint: 0.1, 1
+                            pos_hint: {'x': 0, 'center_y':0.5}
+                            source: 'D:\\Projects\\pycharmprojects\\27-278841_bow-minecraft-bow-png.png'
+                        Label:
+                            size_hint: 0.1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+                            text: "+10xp for power"
+                            font_size: 25
+                        Label:
+                            size_hint: 0.1, 1
+                            pos_hint: {'right': 1, 'y': 0}
+                            text: "100$"
+                            font_size: 25
+
+            BoxLayout:
+                orientation: 'horizontal'
+                Button:
+                    font_size: 25
+                    background_color: 255, 0, 50, 1
+                    id: bt4
+                    text: "To Clicker"
+                    on_press: root.toClickerScr()
+
+        
+<ClickScr>:
+    FloatLayout:
+        Image:
+            source: 'D:\\Projects\\pycharmprojects\\1772.jpg'
+        BoxLayout:
+            orientation: "vertical"
+            Label:
+                id: l1
+                background_color: 1, 1, 1, 1
+                color: 1, 0, 50, 1
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                size_hint: 0.5, 0.5
+                text: "0"
+                font_size: 25
+            Button:
+                id: btr
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                background_color: 255, 0, 50, 1
+                size_hint: 0.5, 0.5
+                text: "Click"
+                on_press: root.click()
+                on_press: root.on_enter()
+                font_size: 25
+
+
+            Button:
+                id: btr2
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                background_color: 255, 0, 50, 1
+                size_hint: 0.5, 0.5
+                text: "To Shop"
+                on_press: root.toShop2Scr()
+                font_size: 25
+            Button:
+                id: bt3
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                background_color: 255, 0, 50, 1
+                size_hint: 0.5, 0.5
+                text: "To Main"
+                on_press: root.toMScr()
+                font_size: 25
+
+<LoginScr>:
+    FloatLayout:
+        Image:
+            source: 'D:\\Projects\\pycharmprojects\\1772.jpg'
+        BoxLayout:
+            id: layout
+            background_color: 0, 0, 0.133, 1
+            orientation: 'vertical'
+            TextInput:
+                background_color: 0, 0, 0, 0
+                foreground_color: 255, 0, 50, 1
+                id: intex1
+                hint_text: "Username"
+                pos_hint: {'center_x': 0.5}
+                size_hint: 0.7, 0.1
+                font_size: 25
+            TextInput:
+                foreground_color: 255, 0, 50, 1
+                background_color: 0, 0, 0, 0
+                id: intex2
+                hint_text: "Password"
+                size_hint: 0.7, 0.1
+                pos_hint: {'center_x': 0.5}
+                font_size: 25
+            Button:
+                font_size: 25
+                background_color: 255, 0, 50, 1
+                id: goshop
+                color: 1, 1, 1, 1
+                size_hint: 0.7, 0.2
+                text: 'Login'
+                pos_hint: {'center_x': 0.5}
+                on_press: root.login()
+                font_size: 25
+            Button:
+                background_color: 255, 0, 50, 1
+                id: goreg
+                color: 1, 1, 1, 1
+                size_hint: 0.7, 0.2
+                text: 'Sign up'
+                pos_hint: {'center_x': 0.5}
+                on_press: root.toreg()
+                font_size: 25
+
+
+
+
+<RegistrScr>:
+    FloatLayout:
+        Image:
+            source: 'D:\\Projects\\pycharmprojects\\1772.jpg'
+        BoxLayout:
+            id: layout
+            orientation: 'vertical'
+            TextInput:
+                background_color: 0, 0, 0, 0
+                id: intex_log
+                pos_hint: {'center_x': 0.5}
+                size_hint: 0.7, 0.1
+                hint_text: "New username"
+                font_size: 25
+                foreground_color: 255, 0, 50, 1
+            TextInput:
+                background_color: 0, 0, 0, 0
+                id: intex_pas
+                size_hint: 0.7, 0.1
+                pos_hint: {'center_x': 0.5}
+                hint_text: "New password"
+                font_size: 25
+                foreground_color: 255, 0, 50, 1
+            Button:
+                background_color: 255, 0, 50, 1
+                id: reg
+                size_hint: 0.7, 0.2
+                text: 'Registration'
+                pos_hint: {'center_x': 0.5}
+                on_press: root.registration()
+                font_size: 25
+
+<TranslatorScr>:
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            size_hint: 0.1, 1
+            text: "Write text"
+            font_size: 25
+            color : 1, 0, 50, 1
+        TextInput:
+            id: wt
+            foreground_color: 255, 0, 50, 1
+            background_color: 255, 255, 255, 0.01
+            font_size: 25
+        Label:
+            size_hint: 0.1, 1
+            text: "Translation"
+            font_size: 25
+            color : 1, 0, 50, 1
+        TextInput:
+            id: wt2
+            foreground_color: 255, 0, 50, 1
+            background_color: 255, 255, 255, 0.01
+            font_size: 25
+        Button:
+            background_color: 255, 0, 50, 1
+            id: trans
+            text: "Translate"
+            font_size: 25
+            on_press: root.transalte()
+        Button:
+            background_color: 255, 0, 50, 1
+            id: trans
+            text: "To Main"
+            font_size: 25
+
+
+
+
+
+
+
+
+
+
+<SettingsScr>:
+    FloatLayout:
+        Image:
+            source: 'D:\\Projects\\pycharmprojects\\1772.jpg'
+        BoxLayout:
+            orientation: "vertical"
+            Button:
+                background_color: 255, 0, 50, 1
+                id: language
+                size_hint: 0.7, 0.2
+                text: 'Українська/English'
+                pos_hint: {'center_x': 0.5}
+                font_size: 25
+                on_press: root.language()
+            Button:
+                background_color: 255, 0, 50, 1
+                id: settt
+                size_hint: 0.7, 0.2
+                text: "To Main"
+                pos_hint: {'center_x': 0.5}
+                on_press: root.settom()
+                font_size: 25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
